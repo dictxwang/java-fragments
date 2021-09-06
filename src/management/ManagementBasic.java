@@ -18,7 +18,7 @@ import java.util.Map;
 
 /**
  * Java Management应用示例（另有JMX是其扩展实现）
- * management常用于对jvm的管理，如过去系统信息、java进程信息、内存使用情况、gc情况等
+ * management常用于对jvm的管理，如获取系统信息、java进程信息、内存使用情况、gc情况等
  * @author wangqiang
  */
 public class ManagementBasic {
