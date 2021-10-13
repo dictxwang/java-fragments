@@ -1,5 +1,7 @@
 package string;
 
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -315,6 +317,21 @@ public class StringSimpleConverter {
 		return new String(fulls);
 	}
 	
+	/**
+	 * 判断是否能通过指定的charset对内容编码
+	 * @param content 待判断的内容
+	 * @param charsetName 指定的编码类型
+	 * @return
+	 */
+	public static boolean canEncodeWithCharset(String content, String charsetName) {
+		try {
+		CharsetEncoder encoder = Charset.forName(charsetName).newEncoder();
+		return encoder.canEncode(content);
+		} catch (Exception exp) {
+			exp.printStackTrace();
+		}
+		return false;
+	}
 
 	public static void main(String[] args) {
 		String half = "我爱北京 天安门，ABCabczｄｅｆ_\"'.,，。：:！……？$#";
@@ -341,5 +358,12 @@ public class StringSimpleConverter {
 		System.out.println(encodeUnicodeString(unicode));
 		// 123我爱北京天安门xyz
 		System.out.println(decodeUnicodeString(unicode));
+		
+		String canEncodeContent = "我爱北京tiananmen";
+		System.out.println(canEncodeWithCharset(canEncodeContent, "GBK")); // true
+		System.out.println(canEncodeWithCharset(canEncodeContent, "UTF-8")); // true
+		canEncodeContent = "ﺝۇڭگﻭ ﺩۇﻦﻳﺍﺩﻰﻛﻯ";
+		System.out.println(canEncodeWithCharset(canEncodeContent, "GBK")); // false
+		System.out.println(canEncodeWithCharset(canEncodeContent, "UTF-8")); // true
 	}
 }
