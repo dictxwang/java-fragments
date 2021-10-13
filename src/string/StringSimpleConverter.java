@@ -362,7 +362,15 @@ public class StringSimpleConverter {
 		String canEncodeContent = "我爱北京tiananmen";
 		System.out.println(canEncodeWithCharset(canEncodeContent, "GBK")); // true
 		System.out.println(canEncodeWithCharset(canEncodeContent, "UTF-8")); // true
+		// 维吾尔文测试（维吾尔文实际上是由32个字母拼读的，分为老维文和新维文，新维文采用拉丁语）
+		// 老维文
 		canEncodeContent = "جۇڭگو خەلقى";
+		System.out.println(canEncodeContent.length()); // 11
+		System.out.println(canEncodeWithCharset(canEncodeContent, "GBK")); // false
+		System.out.println(canEncodeWithCharset(canEncodeContent, "UTF-8")); // true
+		// 新维文
+		canEncodeContent = "survivante ouïghoure";
+		System.out.println(canEncodeContent.length()); // 20
 		System.out.println(canEncodeWithCharset(canEncodeContent, "GBK")); // false
 		System.out.println(canEncodeWithCharset(canEncodeContent, "UTF-8")); // true
 	}
