@@ -362,7 +362,7 @@ public class StringSimpleConverter {
 		String canEncodeContent = "我爱北京tiananmen";
 		System.out.println(canEncodeWithCharset(canEncodeContent, "GBK")); // true
 		System.out.println(canEncodeWithCharset(canEncodeContent, "UTF-8")); // true
-		canEncodeContent = "ﺝۇڭگﻭ ﺩۇﻦﻳﺍﺩﻰﻛﻯ";
+		canEncodeContent = "جۇڭگو خەلقى";
 		System.out.println(canEncodeWithCharset(canEncodeContent, "GBK")); // false
 		System.out.println(canEncodeWithCharset(canEncodeContent, "UTF-8")); // true
 	}
