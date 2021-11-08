@@ -134,6 +134,7 @@ public class ReadFileBasic {
 	}
 	
 	// 使用MappedByteBuffer读取，使用内存映射的方式提升大文件读取的性能
+	// RandomAccessFile可以实现随机读取，从而提高效率
 	private static byte[] readAllByMapperdBuffer(String filepath) throws IOException {
 		long st = System.currentTimeMillis();
 		byte[] result = null;
