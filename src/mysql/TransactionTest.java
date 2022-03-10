@@ -18,17 +18,18 @@ public class TransactionTest implements Configure {
 			Statement stmt = conn.createStatement();
 			conn.setAutoCommit(false);
 			
+			// myisam 不支持事务、行锁和外键
+//			String sql01 = "insert into myisamtest set name='"+ Utils.getUUID() +"'";
+//			String sql02 = "insert into myisamtest set name='"+ Utils.getUUID() +"'";
 			
-			String sql01 = "insert into myisamtest set name='"+ Utils.getUUID() +"'";
-			String sql02 = "insert into myisamtest set name='"+ Utils.getUUID() +"'";
-			
-//			String sql01 = "insert into myinnodb set name='abc'";
-//			String sql02 = "insert into myinnodb set name='def'";
+			// innodb支持事务
+			String sql01 = "insert into myinnodb set name='abc'";
+			String sql02 = "insert into myinnodb set name='def'";
 			
 			stmt.execute(sql01);
 			stmt.execute(sql02);
 			
-//			conn.commit();
+			conn.commit();
 		} catch (Exception exp) {
 			exp.printStackTrace();
 		} finally {
