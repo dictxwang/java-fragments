@@ -37,6 +37,18 @@ java常用api示例代码片段，基于jdk1.8编写。
 
 [URL参数编码操作](https://github.com/dictxwang/java-fragments/blob/main/src/encoding/UrlEncodingMain.java)
 
+[加密算法：java实现AES加密算法](https://github.com/dictxwang/java-fragments/blob/main/src/encrypt/AES.java)
+
+[加密算法：java实现DES加密算法](https://github.com/dictxwang/java-fragments/blob/main/src/encrypt/DES.java)
+
+[加密算法：java实现RSA非对称加密算法](https://github.com/dictxwang/java-fragments/blob/main/src/encrypt/RSA.java)
+
+[摘要算法：java实现SHA256摘要算法](https://github.com/dictxwang/java-fragments/blob/main/src/encrypt/SHA256.java)
+
+[编码算法：BASE64的实现及http场景下的特殊处理](https://github.com/dictxwang/java-fragments/blob/main/src/encrypt/Base64.java)
+
+[编码算法：一种自创的uuid字符串压缩算法](https://github.com/dictxwang/java-fragments/blob/main/src/encrypt/HexCharCompression.java)
+
 [字符串equals与=的差异](https://github.com/dictxwang/java-fragments/blob/main/src/equals/ObjectEquals.java)
 
 [文件读写的多种方式](https://github.com/dictxwang/java-fragments/tree/main/src/filecontrol)
@@ -98,3 +110,4 @@ java常用api示例代码片段，基于jdk1.8编写。
 [ActiveMQ的应用实践](https://github.com/dictxwang/java-fragments/tree/main/src/tjms)
 
 [UDP编程实践（DatagramSocket）](https://github.com/dictxwang/java-fragments/tree/main/src/udp)
+
