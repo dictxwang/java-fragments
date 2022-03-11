@@ -97,7 +97,7 @@ java常用api示例代码片段，基于jdk1.8编写。
 
 [java原生远程调用的应用（RMI）](https://github.com/dictxwang/java-fragments/tree/main/src/rmi)
 
-[java类扫描的实现（工程路径、jar包等）](https://github.com/dictxwang/java-fragments/blob/main/src/scanclass/ClassScan.java)
+[java类扫描的实现（扫描工程路径、jar包等）](https://github.com/dictxwang/java-fragments/blob/main/src/scanclass/ClassScan.java)
 
 [java安全策略的一些示例](https://github.com/dictxwang/java-fragments/tree/main/src/security)
 
