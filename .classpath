@@ -17,6 +17,9 @@
 	<classpathentry kind="lib" path="lib/tools.jar"/>
 	<classpathentry kind="lib" path="lib/aviator-5.2.7.jar" sourcepath="/Users/wangqiang/CodeResourceOpen/aviatorscript-aviator-5.2.6.zip"/>
 	<classpathentry kind="lib" path="lib/byte-buddy-1.11.14.jar" sourcepath="/Users/wangqiang/CodeResourceOpen/byte-buddy-byte-buddy-1.11.14.zip"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.13.0.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.13.0.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.13.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
