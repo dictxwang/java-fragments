@@ -54,7 +54,7 @@ public class BitOperation {
            IntFunction<Integer> abs = n -> (n ^ (n >> 31)) - (n >> 31);
            System.out.println(abs.apply(-12)); // 12
            System.out.println(abs.apply(0)); // 0
-           System.out.println(abs.apply(12)); // -12
+           System.out.println(abs.apply(12)); // 12
            
            /**利用位运算判断包含关系（参考linux文件系统权限管理）*/
            int read = 4, write = 2, exec = 1;
