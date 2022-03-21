@@ -16,6 +16,7 @@ public class BitOperation {
     	 /**原码、取反、补码*/
     	 System.out.println(15);
     	 System.out.println(~15);
+    	 // 负数的补码等价于其对应整数取反再加1
     	 System.out.println((~15) + 1);
     	 // 对负数取反再加一，相当于求其绝对值
     	 System.out.println((~-15) + 1);
