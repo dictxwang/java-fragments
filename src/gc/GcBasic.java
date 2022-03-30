@@ -41,6 +41,7 @@ public class GcBasic {
 			map = new HashMap<>();
 		} else if ("weak".equals(mapFlag)) {
 			// 每次gc就会被回收，不会引发oom
+			// 但是如果参数配置不正确，会造成gc阶段没有足够的空间用于对象复制，从而引发fullGC甚至oom
 			map = new WeakHashMap<>();
 		}
 		int count = 0;
