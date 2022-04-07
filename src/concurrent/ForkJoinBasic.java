@@ -9,6 +9,13 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 
+/**
+ * 通过Fork/Join框架统计单词的数量
+ * 类似Map-Reduce实现
+ * 
+ * @author wangqiang
+ *
+ */
 public class ForkJoinBasic {
 
 	public static void main(String[] args) throws Exception {
