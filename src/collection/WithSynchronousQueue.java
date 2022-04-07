@@ -6,9 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 public class WithSynchronousQueue {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		
 		SynchronousQueue<String> queue = new SynchronousQueue<String>();
@@ -44,7 +41,7 @@ class WriteThread extends Thread {
 		while (true) {
 			String value = UUID.randomUUID().toString();
 			try {
-				this.queue.offer(null, 500, TimeUnit.MILLISECONDS);
+				this.queue.offer(value, 500, TimeUnit.MILLISECONDS);
 				System.out.printf("[%s] put a element - %s\n", name, value);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
