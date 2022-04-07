@@ -31,6 +31,20 @@ java常用api示例代码片段，基于jdk1.8编写。
 
 [java集合相关api的应用](https://github.com/dictxwang/java-fragments/tree/main/src/collection)
 
+[并发编程：CountDownLatch的应用](https://github.com/dictxwang/java-fragments/blob/main/src/concurrent/CountDownLatchBasic.java)
+
+[并发编程：CyclicBarrier的使用](https://github.com/dictxwang/java-fragments/blob/main/src/concurrent/CyclicBarrierBasic.java)
+
+[并发编程：使用Exchanger进行线程间数据交互](https://github.com/dictxwang/java-fragments/blob/main/src/concurrent/ExchangerBasic.java)
+
+[并发编程：使用Fork/Join进行大任务的拆分执行](https://github.com/dictxwang/java-fragments/blob/main/src/concurrent/ForkJoinBasic.java)
+
+[并发编程：使用Phaser进行多阶段的并发控制](https://github.com/dictxwang/java-fragments/blob/main/src/concurrent/PhaserBasic.java)
+
+[并发编程：通过Semaphore信号量控制并发的数量](https://github.com/dictxwang/java-fragments/blob/main/src/concurrent/SemaphoreBasic.java)
+
+[并发编程：通过volatile与Atomic区分可见性和原子性](https://github.com/dictxwang/java-fragments/blob/main/src/concurrent/VolatileAtomicBasic.java)
+
 [使用io包的api调用tcp服务](https://github.com/dictxwang/java-fragments/blob/main/src/cpython/CallPythonServer.java)
 
 [使用nio包的api调用tcp服务](https://github.com/dictxwang/java-fragments/blob/main/src/cpython/CallPythonServerWithNio.java)
@@ -52,6 +66,8 @@ java常用api示例代码片段，基于jdk1.8编写。
 [字符串equals与=的差异](https://github.com/dictxwang/java-fragments/blob/main/src/equals/ObjectEquals.java)
 
 [文件读写的多种方式](https://github.com/dictxwang/java-fragments/tree/main/src/filecontrol)
+
+[G1垃圾收集器的应用](https://github.com/dictxwang/java-fragments/blob/main/src/gc/GcBasic.java)
 
 [java泛型的深度理解（PECS原则）](https://github.com/dictxwang/java-fragments/blob/main/src/generic/GenericBasic.java)
 
