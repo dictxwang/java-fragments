@@ -1,5 +1,5 @@
 
-package DBControl;
+package database;
 
 import java.sql.*;
 //import sun.jdbc.odbc.JdbcOdbcDriver;
