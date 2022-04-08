@@ -73,6 +73,8 @@ java常用api示例代码片段，基于jdk1.8编写。
 
 [类的热编译与热加载](https://github.com/dictxwang/java-fragments/tree/main/src/hot)
 
+[java反射的另一种实现（MethodHandles的使用）](https://github.com/dictxwang/java-fragments/blob/main/src/invoke/InvokeBasic.java)
+
 [IO中PipeStream的应用](https://github.com/dictxwang/java-fragments/blob/main/src/io/PipeStreamTestMain.java)
 
 [NIO中Pipe的应用](https://github.com/dictxwang/java-fragments/blob/main/src/io/PipeTestMain.java)
@@ -110,6 +112,8 @@ java常用api示例代码片段，基于jdk1.8编写。
 [java正则表达式的使用（Pattern）](https://github.com/dictxwang/java-fragments/blob/main/src/pattern/PatternMain.java)
 
 [java动态代理的实现（Proxy与InvocationHandler）](https://github.com/dictxwang/java-fragments/tree/main/src/proxy)
+
+[java的反射操作（reflect相关）](https://github.com/dictxwang/java-fragments/blob/main/src/reflect/ReflectBasic.java)
 
 [java原生远程调用的应用（RMI）](https://github.com/dictxwang/java-fragments/tree/main/src/rmi)
 
