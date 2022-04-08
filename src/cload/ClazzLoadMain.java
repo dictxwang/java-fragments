@@ -19,7 +19,7 @@ class FinalStatic {
 	public static final int a = 4 + b;
 	
 	static {
-		System.out.println("静态块被执行");
+		System.out.println("静态代码块被执行");
 	}
 }
 
@@ -27,6 +27,10 @@ class Singleton {
 	public static Singleton instance = new Singleton();
 	public static int a;
 	public static int b = 0;
+	
+	{
+		System.out.println("实例代码块被执行");
+	}
 	
 	private Singleton() {
 		a++;
