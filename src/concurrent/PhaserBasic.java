@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author wangqiang
  *
- *	Phase可以实现分阶段的同步控制
+ * Phase可以实现分阶段的同步控制
  */
 public class PhaserBasic {
 
@@ -28,11 +28,11 @@ public class PhaserBasic {
 				try {
 					TimeUnit.SECONDS.sleep(rand.nextInt(5));
 					System.out.println("Child task-" + num + " finished.");
-					// 阻塞并等待其他任务完成
+					// 通知子任务已经完成
 					phaser.arrive();
 
-					// 如果是调用的arriveAndAwaitAdvance()，此处的代码不会立即执行
-					// 如果是调用的arrive()，此处的代码会立即执行
+					// 如果是调用的arriveAndAwaitAdvance()，之后的代码不会立即执行
+					// 如果是调用的arrive()，之后的代码会立即执行
 					// 只需要进行一个阶段的同步，子线程调用arrive即可
 					System.out.println("Child task-" + num + " after await");
 				} catch (Exception exp) {
