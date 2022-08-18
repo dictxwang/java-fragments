@@ -10,7 +10,7 @@ public class RMIServerThread extends Thread {
 		try {
 			IHello rhello = new HelloImpl();
 			// 避免出现客户端链接失败的情况
-			System.setProperty("java.rmi.server.hostname ", "10.131.30.221");
+			System.setProperty("java.rmi.server.hostname ", "127.0.0.1");
 			Registry registry = LocateRegistry.createRegistry(8000);
 			
 			// rebind的name可以是任意字符串，例如wangqiang/rhello也可以

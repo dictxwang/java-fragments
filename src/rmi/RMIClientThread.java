@@ -21,9 +21,9 @@ public class RMIClientThread extends Thread {
 		while (++count <= 10) {
 			try {
 				// 如果用Naming方式，需要注意lookup的name包括了host和端口信息
-//				IHello rhello = (IHello)Naming.lookup("rmi://10.131.30.221:8000/rhello");
+				// IHello rhello = (IHello)Naming.lookup("rmi://10.131.30.221:8000/rhello");
 				// 使用getRegistry的方式更加合理
-				Registry registry = LocateRegistry.getRegistry("10.131.30.221", 8000);
+				Registry registry = LocateRegistry.getRegistry("127.0.0.1", 8001);
 				IHello rhello = (IHello)registry.lookup("rmi://127.0.0.1:8000/rhello");
 				/**
 				 * 列出所有的 name bound
