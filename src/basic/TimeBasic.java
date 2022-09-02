@@ -149,8 +149,14 @@ public class TimeBasic {
 		Date olddate2 = Date.from(ins21);
 		System.out.println(olddate2);
 		
-		Calendar cal21 = Calendar.getInstance(TimeZone.getTimeZone("GMT+4"));
+		// 正确设置时区的方式 GMT+8 或者用别名
+		Calendar cal21 = Calendar.getInstance(TimeZone.getTimeZone("GMT+8"));
+		System.out.println(cal21.get(Calendar.HOUR_OF_DAY));
 		Instant ins22 = cal21.toInstant();
 		System.out.println(ins22);
+		
+		// 错误方式设置时区，会被默认处理为0时区
+		Calendar cal31 = Calendar.getInstance(TimeZone.getTimeZone("+8"));
+		System.out.println(cal31.get(Calendar.HOUR_OF_DAY));
 	}
 }
