@@ -158,5 +158,6 @@ public class TimeBasic {
 		// 错误方式设置时区，会被默认处理为0时区
 		Calendar cal31 = Calendar.getInstance(TimeZone.getTimeZone("+8"));
 		System.out.println(cal31.get(Calendar.HOUR_OF_DAY));
+		
 	}
 }

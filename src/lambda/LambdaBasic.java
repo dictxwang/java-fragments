@@ -133,9 +133,9 @@ public class LambdaBasic {
      
      private static void testCollect() {
     	 
-    	 Person p1 = new Person("wang", 10);
+    	 Person p1 = new Person("wang", 30);
     	 Person p2 = new Person("wang", 20);
-    	 Person p3 = new Person("qian", 30);
+    	 Person p3 = new Person("qian", 10);
     	 
     	 // 分组
     	 List<Person> plist = new ArrayList<>();
@@ -144,6 +144,9 @@ public class LambdaBasic {
     	 plist.add(p3);
     	 Map<String, List<Person>> groupMap = plist.stream().collect(Collectors.groupingBy(Person::getName));
     	 System.out.println(groupMap);
+    	 
+    	 List<Person> plistSorted = plist.stream().sorted((px, py) -> px.getMoney() - py.getMoney()).collect(Collectors.toList());
+    	 System.out.println(plistSorted);
     	 
     	 // 转map
     	 // 这种方式如果key重复会报错： Duplicate key
@@ -183,6 +186,10 @@ public class LambdaBasic {
            }
            public void printMoney(Function<Integer, String> format) {
                 System.out.println(format.apply(this.money));
+           }
+           
+           public String toString() {
+        	   return String.format("{name=%s, money=%d}", this.name, this.money);
            }
      }
 }
