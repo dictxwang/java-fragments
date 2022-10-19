@@ -134,14 +134,16 @@ public class LambdaBasic {
      private static void testCollect() {
     	 
     	 Person p1 = new Person("wang", 30);
-    	 Person p2 = new Person("wang", 20);
-    	 Person p3 = new Person("qian", 10);
+    	 Person p2 = new Person("zhao", 10);
+    	 Person p3 = new Person("wang", 20);
+    	 Person p4 = new Person("qian", 10);
     	 
     	 // 分组
     	 List<Person> plist = new ArrayList<>();
     	 plist.add(p1);
     	 plist.add(p2);
     	 plist.add(p3);
+    	 plist.add(p4);
     	 Map<String, List<Person>> groupMap = plist.stream().collect(Collectors.groupingBy(Person::getName));
     	 System.out.println(groupMap);
     	 
@@ -154,6 +156,9 @@ public class LambdaBasic {
     	 // 这种模式下 (k1, k2) -> k1 表示key冲突时，选择k1
     	 Map<String, Person> pMap = plist.stream().collect(Collectors.toMap(p -> p.getName(), p -> p, (k1, k2) -> k1));
     	 System.out.println(pMap);
+    	 
+    	 Person pf = plist.stream().filter(p -> p.money == 10).findAny().orElse(null);
+    	 System.out.println(pf);
      }
      
      @FunctionalInterface
