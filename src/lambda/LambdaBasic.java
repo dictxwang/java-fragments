@@ -129,6 +129,18 @@ public class LambdaBasic {
            
            // 专项测试collect操作
            testCollect();
+           
+           // optional专项
+           testOptional();
+     }
+     
+     private static void testOptional() {
+    	 
+    	 Person p = new Person("sun", 18);
+    	 List<String> books = new ArrayList();
+    	 p.setBooks(books);
+    	 String book = Optional.ofNullable(p.getBooks().get(0)).orElse("NULL Book");
+    	 System.out.println(book);
      }
      
      private static void testCollect() {
@@ -147,10 +159,13 @@ public class LambdaBasic {
     	 Map<String, List<Person>> groupMap = plist.stream().collect(Collectors.groupingBy(Person::getName));
     	 System.out.println(groupMap);
     	 
-    	 List<Person> plistSorted = plist.stream().sorted((px, py) -> px.getMoney() - py.getMoney()).collect(Collectors.toList());
+    	 List<Person> plistSorted = plist.stream().sorted((px, py) -> py.getMoney() - py.getMoney()).collect(Collectors.toList());
     	 System.out.println(plistSorted);
+    	 boolean anyMatch = plist.stream().anyMatch(p -> p.getMoney() == 10);
+    	 System.out.println(anyMatch);
     	 
     	 // 转map
+    	 
     	 // 这种方式如果key重复会报错： Duplicate key
     	 // Map<String, Person> pMap = plist.stream().collect(Collectors.toMap(p -> p.getName(), p -> p));
     	 // 这种模式下 (k1, k2) -> k1 表示key冲突时，选择k1
@@ -174,9 +189,11 @@ public class LambdaBasic {
                 return x - y;
            }
      }
+     
      private static class Person {
            String name;
            int money;
+           List<String> books;
 
            public Person(String name, int money) {
                 super();
@@ -195,6 +212,14 @@ public class LambdaBasic {
            
            public String toString() {
         	   return String.format("{name=%s, money=%d}", this.name, this.money);
+           }
+           
+           public void setBooks(List<String> books) {
+        	   this.books = books;
+           }
+           
+           public List<String> getBooks() {
+        	   return this.books;
            }
      }
 }

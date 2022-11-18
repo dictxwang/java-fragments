@@ -1,7 +1,11 @@
 package basic;
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class TimeUtil {
 
@@ -30,6 +34,27 @@ public class TimeUtil {
 		firstPeriod = new String[] {"22:00:00", "09:00:00"};
 		secondPeriod = new String[] {"08:00:00", "09:00:00"};
 		System.out.println(isPeriodOverlapping(firstPeriod, secondPeriod)); // true
+		
+		showTimeDuration("2022-09-10 10:00:00", "2022-10-20 09:00:01");
+		showDateDuration("2022-09-10", "2022-10-20");
+	}
+	
+	// 使用时间差
+	public static void showTimeDuration(String beginDateTime, String endDateTime) {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		LocalDateTime begin = LocalDateTime.parse(beginDateTime, dtf);
+		LocalDateTime end = LocalDateTime.parse(endDateTime, dtf);
+		Duration duration = Duration.between(begin ,end);
+		System.out.println(duration.toDays());
+	}
+	
+	// 使用日期差
+	public static void showDateDuration(String beginDate, String endDate) {
+		LocalDate begin = LocalDate.parse(beginDate);
+		// 默认日期格式即为 ”yyyy-MM-dd“
+		LocalDate end = LocalDate.parse(endDate);
+		long days = begin.until(end, ChronoUnit.DAYS);
+		System.out.println(days);
 	}
 	
 	public static boolean isPeriodOverlapping(String[] first, String[] second) {

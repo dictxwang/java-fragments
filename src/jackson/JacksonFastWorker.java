@@ -19,6 +19,8 @@ public class JacksonFastWorker {
         mapper = new ObjectMapper();
         // 采用默认的配置
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        // 将空字符当做null处理
+        // mapper.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true);
         // 设置输出时包含属性的风格
         mapper.setSerializationInclusion(Include.NON_NULL);
         // 可以序列化对象的所有访问属性的成员
@@ -67,6 +69,7 @@ public class JacksonFastWorker {
         try {
             return mapper.readValue(jsonString, clazz);
         } catch (IOException exp) {
+        	exp.printStackTrace();
         }
         return null;
     }

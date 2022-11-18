@@ -173,6 +173,9 @@ public class ManagementBasic {
 		System.out.printf("arch = %s, availableProcessors = %d, version = %s, name = %s, systemLoadAverage = %s\n",
 				mxbean.getArch(), mxbean.getAvailableProcessors(), mxbean.getVersion(), 
 				mxbean.getName(), mxbean.getSystemLoadAverage());
+		
+		// 简单方式获取cpu内核数量
+		System.out.println(Runtime.getRuntime().availableProcessors());
 	}
 	
 	// 编译系统相关的信息
