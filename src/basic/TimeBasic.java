@@ -11,6 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.TimeZone;
 /**
  * 关于时间的一些缩写符号
@@ -36,8 +37,10 @@ public class TimeBasic {
 		
 		// 打印当前时间戳，实际上调用的是一个native本地方法
 		// 此方法是不稳定的，存在一定的误差，根据系统的不同存在几毫秒到数十毫秒误差
+		// 因为其值的粒度取决于底层操作系统，许多操作系统以几十毫秒为单位测量时间
 		System.out.println(System.currentTimeMillis());
 		// 通过纳秒来转换毫秒，但这种方式获取的不是当前时间，仅是一个递增的数值，并且有溢出的可能
+		// 同JVM的递增起点是不同的，因此不能进行比较
 		System.out.println(System.nanoTime() / 1000);
 		
 		// 此构造方法实际上调用的是System.currentTimeMillis()
@@ -113,6 +116,9 @@ public class TimeBasic {
 		LocalDateTime ldt = LocalDateTime.parse("2020-12-25 10:10:05", dtf2);
 		System.out.println(ldt);
 		
+		DateTimeFormatter dtf3 = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss a", new Locale(Locale.ENGLISH.getLanguage()));
+		System.out.println(dtf3.format(LocalDateTime.now())); // 2022-12-12 02:02:00 PM
+		
 		Instant inow = Instant.now();
 		// 获取当前时间毫秒数
 		System.out.println(inow.toEpochMilli());
@@ -149,6 +155,10 @@ public class TimeBasic {
 		Date olddate2 = Date.from(ins21);
 		System.out.println(olddate2);
 		
+		LocalDateTime ldt2ts = LocalDateTime.now();
+		long ts = ldt2ts.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+		System.out.println(ts);
+		
 		// 正确设置时区的方式 GMT+8 或者用别名
 		Calendar cal21 = Calendar.getInstance(TimeZone.getTimeZone("GMT+8"));
 		System.out.println(cal21.get(Calendar.HOUR_OF_DAY));
@@ -159,5 +169,10 @@ public class TimeBasic {
 		Calendar cal31 = Calendar.getInstance(TimeZone.getTimeZone("+8"));
 		System.out.println(cal31.get(Calendar.HOUR_OF_DAY));
 		
+		LocalDateTime ldtStart = LocalDateTime.of(1970, 1, 1, 8, 0, 0);
+		System.out.println(ldtStart.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()); // 0
+		
+		System.out.println(System.nanoTime());
+		System.out.println(System.currentTimeMillis());
 	}
 }

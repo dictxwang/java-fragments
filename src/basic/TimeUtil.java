@@ -37,6 +37,18 @@ public class TimeUtil {
 		
 		showTimeDuration("2022-09-10 10:00:00", "2022-10-20 09:00:01");
 		showDateDuration("2022-09-10", "2022-10-20");
+		
+		System.out.println(">>>> calNaturalMonthDays");
+		int naturalMonthDays = calNaturalMonthDays("2022-10-10", "2022-10-21");
+		System.out.println(naturalMonthDays);
+		naturalMonthDays = calNaturalMonthDays("2022-10-01", "2022-10-31");
+		System.out.println(naturalMonthDays);
+		naturalMonthDays = calNaturalMonthDays("2022-10-10", "2022-11-21");
+		System.out.println(naturalMonthDays);
+		naturalMonthDays = calNaturalMonthDays("2022-11-10", "2023-01-01");
+		System.out.println(naturalMonthDays);
+		naturalMonthDays = calNaturalMonthDays("2023-01-01", "2023-01-31");
+		System.out.println(naturalMonthDays);
 	}
 	
 	// 使用时间差
@@ -85,5 +97,18 @@ public class TimeUtil {
 		
 		// 如果两个时间段，最大开始时间 < 最小结束时间，则时间段重复
 		return maxStart.isBefore(minEnd);
+	}
+	
+	public static int calNaturalMonthDays(String beginDate, String endDate) {
+		LocalDate begin = LocalDate.parse(beginDate);
+        LocalDate end = LocalDate.parse(endDate);
+
+        LocalDate adjustBegin = LocalDate.of(begin.getYear(), begin.getMonth(), 1);
+        LocalDate adjustEnd = LocalDate.of(end.getYear(), end.getMonth(), 1);
+        adjustEnd = adjustEnd.plusMonths(1);
+
+        // 计算所跨月份的自然天数
+        int days = Long.valueOf(adjustBegin.until(adjustEnd, ChronoUnit.DAYS)).intValue();
+        return days;
 	}
 }

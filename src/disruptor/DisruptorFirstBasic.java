@@ -22,13 +22,13 @@ import com.lmax.disruptor.dsl.ProducerType;
 public class DisruptorFirstBasic {
 
 	public static void main(String[] args) throws Exception {
-		singleProducerAndConsumer();
+//		singleProducerAndConsumer();
 //		singleProducerMultiConsumerOneByOne();
 //		singleProducerMultiConsumerOneTime();
 //		singleProducerMultiConsumerSingleton();
 //		singleProducerMultiConsumerGroupsOneByOne();
 //		singleProducerMultiConsumerGroupsOneTime();
-//		multiProduerAndSingleConsumer();
+		multiProduerAndSingleConsumer();
 	}
 	
 	// 单个生产者、消费者

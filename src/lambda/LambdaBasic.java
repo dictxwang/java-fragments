@@ -132,12 +132,31 @@ public class LambdaBasic {
            
            // optional专项
            testOptional();
+           
+           testMapCompute();
+     }
+     
+     private static void testMapCompute() {
+    	 Person p1 = new Person("zhao", 1);
+    	 Person p2 = new Person("zhao", 2);
+    	 Person p3 = new Person("qian", 5);
+    	 List<Person> plist = new ArrayList<>();
+    	 plist.add(p1);
+    	 plist.add(p2);
+    	 plist.add(p3);
+    	 
+    	 Map<String, Integer> map = new HashMap<>();
+    	 for (Person p : plist) {
+    		 map.compute(p.getName(), (k, v) -> v == null ? p.getMoney() : v + p.getMoney());
+    	 }
+    	 System.out.println(map);
      }
      
      private static void testOptional() {
     	 
     	 Person p = new Person("sun", 18);
-    	 List<String> books = new ArrayList();
+    	 List<String> books = new ArrayList<>();
+    	 books.add(null);
     	 p.setBooks(books);
     	 String book = Optional.ofNullable(p.getBooks().get(0)).orElse("NULL Book");
     	 System.out.println(book);
