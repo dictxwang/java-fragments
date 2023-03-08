@@ -21,6 +21,7 @@
 	<classpathentry kind="lib" path="lib/jackson-databind-2.13.0.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-annotations-2.13.0.jar"/>
 	<classpathentry kind="lib" path="lib/disruptor-3.4.4.jar" sourcepath="lib-sources/disruptor-3.4.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/fastjson-1.2.83_noneautotype.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
