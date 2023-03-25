@@ -134,6 +134,11 @@ public class LambdaBasic {
            testOptional();
            
            testMapCompute();
+           
+           List<String> lst = new ArrayList<>();
+           lst.add("a");
+           List<String> lst2 = lst.stream().map(i -> i+i).collect(Collectors.toList());
+           System.out.println(lst2);
      }
      
      private static void testMapCompute() {
