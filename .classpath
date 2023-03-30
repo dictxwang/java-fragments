@@ -2,26 +2,26 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="resources"/>
-	<classpathentry kind="lib" path="lib/jmxtools.jar"/>
-	<classpathentry kind="lib" path="lib/jmxri.jar"/>
-	<classpathentry kind="lib" path="lib/jmxremote_optional.jar"/>
-	<classpathentry kind="lib" path="lib/jmxremote.jar"/>
-	<classpathentry kind="lib" path="lib/rmissl.jar"/>
-	<classpathentry kind="lib" path="lib/javax.jms-3.1.2.2.jar" sourcepath="E:/java-open-source/jms/javax.jms-api-2.0-b13-sources.jar"/>
-	<classpathentry kind="lib" path="lib/activemq-all-5.8.0.jar" sourcepath="E:/java-open-source/jms/activemq-parent-5.8.0-source-release.zip"/>
-	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.24-bin.jar" sourcepath="E:/java-open-source/JarLib/mysql-connector-java/mysql-connector-java-5.1.24/src"/>
-	<classpathentry kind="lib" path="lib/hessian-4.0.7.jar"/>
-	<classpathentry kind="lib" path="lib/cglib-3.3.0.jar"/>
-	<classpathentry kind="lib" path="lib/asm-7.3.1.jar"/>
-	<classpathentry kind="lib" path="lib/javassist-3.28.0-GA.jar"/>
-	<classpathentry kind="lib" path="lib/tools.jar"/>
-	<classpathentry kind="lib" path="lib/aviator-5.2.7.jar" sourcepath="/Users/wangqiang/CodeResourceOpen/aviatorscript-aviator-5.2.6.zip"/>
-	<classpathentry kind="lib" path="lib/byte-buddy-1.11.14.jar" sourcepath="/Users/wangqiang/CodeResourceOpen/byte-buddy-byte-buddy-1.11.14.zip"/>
-	<classpathentry kind="lib" path="lib/jackson-core-2.13.0.jar"/>
-	<classpathentry kind="lib" path="lib/jackson-databind-2.13.0.jar"/>
-	<classpathentry kind="lib" path="lib/jackson-annotations-2.13.0.jar"/>
-	<classpathentry kind="lib" path="lib/disruptor-3.4.4.jar" sourcepath="lib-sources/disruptor-3.4.4-sources.jar"/>
-	<classpathentry kind="lib" path="lib/fastjson-1.2.83_noneautotype.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/jmxtools.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jmxri.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jmxremote_optional.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jmxremote.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/rmissl.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax.jms-3.1.2.2.jar" sourcepath="E:/java-open-source/jms/javax.jms-api-2.0-b13-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/activemq-all-5.8.0.jar" sourcepath="E:/java-open-source/jms/activemq-parent-5.8.0-source-release.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/mysql-connector-java-5.1.24-bin.jar" sourcepath="E:/java-open-source/JarLib/mysql-connector-java/mysql-connector-java-5.1.24/src"/>
+	<classpathentry exported="true" kind="lib" path="lib/hessian-4.0.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/cglib-3.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/asm-7.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javassist-3.28.0-GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/tools.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/aviator-5.2.7.jar" sourcepath="/Users/wangqiang/CodeResourceOpen/aviatorscript-aviator-5.2.6.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/byte-buddy-1.11.14.jar" sourcepath="/Users/wangqiang/CodeResourceOpen/byte-buddy-byte-buddy-1.11.14.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jackson-core-2.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jackson-databind-2.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jackson-annotations-2.13.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/disruptor-3.4.4.jar" sourcepath="lib-sources/disruptor-3.4.4-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/fastjson-1.2.83_noneautotype.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
