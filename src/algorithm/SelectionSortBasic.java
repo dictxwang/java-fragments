@@ -18,7 +18,7 @@ public class SelectionSortBasic {
 		if (Objects.isNull(lst) || lst.length <= 1) {
 			return;
 		}
-		for (int left = 0; left < lst.length; left++) {
+		for (int left = 0; left < lst.length - 1; left++) {
 			int swapIndex = left;
 			for (int right = left; right < lst.length; right++) {
 				if (lst[right] < lst[left]) {
