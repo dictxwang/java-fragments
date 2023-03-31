@@ -20,7 +20,7 @@ public class SelectionSortBasic {
 		}
 		for (int left = 0; left < lst.length - 1; left++) {
 			int swapIndex = left;
-			for (int right = left; right < lst.length; right++) {
+			for (int right = left + 1; right < lst.length; right++) {
 				if (lst[right] < lst[left]) {
 					swapIndex = right;
 				}
