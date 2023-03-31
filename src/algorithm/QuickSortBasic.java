@@ -6,7 +6,7 @@ public class QuickSortBasic {
 
 	public static void main(String[] args) {
 
-		int[] lst = {0, -6, 90, 10, 10, 3, 2, -1, 20};
+		int[] lst = {0, -6, 90, 10, 10, 3, 2, 3, -1, 20};
 		quickSort(lst, 0, lst.length - 1);
 		for (int val : lst) {
 			System.out.println(val);
@@ -21,13 +21,12 @@ public class QuickSortBasic {
 			return;
 		}
 		
-//		System.out.printf("%d=>%d\n", fromIndex, endIndex);
-		
 		int middleIndex = (endIndex - fromIndex + 1) / 2 + fromIndex;
 		int middleValue = lst[middleIndex];
 		for (int i = fromIndex; i <= endIndex; i++) {
 			if (lst[i] < middleValue && i > middleIndex) {
 				// 需要把小于中间值的元素向左移动
+				// 相当于首先把中间值到当前值前一位整体右移，然后用当前值填充原中间值位置
 				int swap = lst[i];
 				for (int j = i; j > middleIndex; j--) {
 					lst[j] = lst[j - 1];
@@ -36,13 +35,14 @@ public class QuickSortBasic {
 				middleIndex += 1;
 			} else if (lst[i] > middleValue && i < middleIndex) {
 				// 需要把大于中间值的元素向右移动
+				// 相当于是当前值后一位到中间值整体左移，然后用当前值填充原中间值位置
 				int swap = lst[i];
 				for (int j = i; j < middleIndex; j++) {
 					lst[j] = lst[j + 1];
 				}
 				lst[middleIndex] = swap;
 				middleIndex -= 1;
-				// 因为元素整体左移一位，需要将下标回拨一位
+				// 因为整体左移一位，需要将下标回拨一位
 				i -= 1;
 			}
 		}
