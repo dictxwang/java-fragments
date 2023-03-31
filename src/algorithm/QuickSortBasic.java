@@ -6,7 +6,7 @@ public class QuickSortBasic {
 
 	public static void main(String[] args) {
 
-		int[] lst = {0, -6, 90, 10, 3, 2, -1, 20};
+		int[] lst = {0, -6, 90, 10, 10, 3, 2, -1, 20};
 		quickSort(lst, 0, lst.length - 1);
 		for (int val : lst) {
 			System.out.println(val);
