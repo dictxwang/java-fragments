@@ -7,13 +7,19 @@ public class QuickSortBasic {
 	public static void main(String[] args) {
 
 		int[] lst = {0, -6, 90, 10, 10, 3, 2, 3, -1, 20};
-		quickSort(lst, 0, lst.length - 1);
+		quickSort(lst);
 		for (int val : lst) {
 			System.out.println(val);
 		}
 	}
-	
-	private static void quickSort(int[] lst, int fromIndex, int endIndex) {
+
+
+	private static void quickSort(int[] lst) {
+		doQuickSort(lst, 0, lst.length - 1);
+	}
+
+
+	private static void doQuickSort(int[] lst, int fromIndex, int endIndex) {
 		
 		if (Objects.isNull(lst) || lst.length <= 1) {
 			return;
@@ -47,8 +53,8 @@ public class QuickSortBasic {
 			}
 		}
 		// 递归分别对左子序列和右子序列排序
-		quickSort(lst, fromIndex, middleIndex - 1);
-		quickSort(lst, middleIndex + 1, endIndex);
+		doQuickSort(lst, fromIndex, middleIndex - 1);
+		doQuickSort(lst, middleIndex + 1, endIndex);
 	}
 
 }
