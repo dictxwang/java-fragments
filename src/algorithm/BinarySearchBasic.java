@@ -8,16 +8,22 @@ public class BinarySearchBasic {
 		
 		int[] lst = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20};
 		
-		System.out.println(binarySearch(lst, 0, 0, lst.length - 1));
-		System.out.println(binarySearch(lst, 1, 0, lst.length - 1));
-		System.out.println(binarySearch(lst, 3, 0, lst.length - 1));
-		System.out.println(binarySearch(lst, 20, 0, lst.length - 1));
-		System.out.println(binarySearch(lst, 6, 0, lst.length - 1));
-		System.out.println(binarySearch(lst, -10, 0, lst.length - 1));
-		System.out.println(binarySearch(lst, 100, 0, lst.length - 1));
+		System.out.println(binarySearch(lst, 0));
+		System.out.println(binarySearch(lst, 1));
+		System.out.println(binarySearch(lst, 3));
+		System.out.println(binarySearch(lst, 20));
+		System.out.println(binarySearch(lst, 6));
+		System.out.println(binarySearch(lst, -10));
+		System.out.println(binarySearch(lst, 100));
 	}
 
-	private static int binarySearch(int[] lst, int pattern, int fromIndex, int endIndex) {
+
+	private static int binarySearch(int[] lst, int pattern) {
+		return doBinarySearch(lst, pattern, 0, lst.length - 1);
+	}
+
+
+	private static int doBinarySearch(int[] lst, int pattern, int fromIndex, int endIndex) {
 		
 		if (Objects.isNull(lst) || endIndex < fromIndex) {
 			return -1;
@@ -28,10 +34,10 @@ public class BinarySearchBasic {
 			return middleIndex;
 		} else if (lst[middleIndex] > pattern) {
 			// 继续在左子序列查找
-			return binarySearch(lst, pattern, fromIndex, middleIndex - 1);
+			return doBinarySearch(lst, pattern, fromIndex, middleIndex - 1);
 		} else {
 			// 继续在右子序列查找
-			return binarySearch(lst, pattern, middleIndex + 1,  endIndex);
+			return doBinarySearch(lst, pattern, middleIndex + 1,  endIndex);
 		}
 	}
 }

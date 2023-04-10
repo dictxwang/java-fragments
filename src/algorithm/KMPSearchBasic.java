@@ -21,6 +21,7 @@ public class KMPSearchBasic {
 		}
 	}
 
+
 	/**
 	 * 生成next表
 	 * 这里next表相当于PMT部分匹配表（Partial Match Table）整体后移一位
@@ -50,7 +51,8 @@ public class KMPSearchBasic {
 		}
 		return next;
 	}
-	
+
+
 	private static List<Integer> kmpSearch(String source, String pattern) {
 		
 		// 先生成next表
