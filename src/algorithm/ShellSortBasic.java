@@ -19,6 +19,7 @@ public class ShellSortBasic {
 		}
 	}
 
+
 	private static void shellSort(int[] lst) {
 		
 		if (Objects.isNull(lst) || lst.length <= 1) {
