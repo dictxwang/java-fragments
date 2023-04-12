@@ -19,7 +19,7 @@ public class QuickSortBasic {
 	}
 	
 	
-private static void doQuickSort(int[] lst, int fromIndex, int endIndex) {
+	private static void doQuickSort(int[] lst, int fromIndex, int endIndex) {
 		
 		if (Objects.isNull(lst) || lst.length <= 1) {
 			return;
