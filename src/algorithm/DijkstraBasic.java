@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 迪杰斯特拉算法实现（基于带权无向图）
+ * 迪杰斯特拉算法实现（基于邻接矩阵的带权无向图实现）
  * 
  * @author wangqiang103
  *
