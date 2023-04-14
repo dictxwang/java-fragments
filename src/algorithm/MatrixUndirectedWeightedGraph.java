@@ -30,7 +30,7 @@ public class MatrixUndirectedWeightedGraph {
 	}
 	
 	
-	private int getPosition(char ch) {
+	public int getPosition(char ch) {
 		for (int i = 0; i < this.size; i++) {
 			if (this.vertexs[i] == ch) {
 				return i;
@@ -40,7 +40,7 @@ public class MatrixUndirectedWeightedGraph {
 	}
 	
 	
-	private void print() {
+	public void print() {
 		for (int i = 0; i < this.size; i++) {
 			for (int v : this.matrix[i]) {
 				System.out.print(v + " ");
@@ -50,6 +50,21 @@ public class MatrixUndirectedWeightedGraph {
 	}
 	
 	
+	public int getSize() {
+		return size;
+	}
+
+
+	public char[] getVertexs() {
+		return vertexs;
+	}
+
+
+	public int[][] getMatrix() {
+		return matrix;
+	}
+
+
 	public static void main(String[] args) {
 		char[] vertexs = {'A', 'B', 'C', 'D', 'E', 'F'};
 		MatrixUndirectedWeightedGraph mudwg = new MatrixUndirectedWeightedGraph(vertexs);
