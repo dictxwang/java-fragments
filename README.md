@@ -9,6 +9,8 @@ java常用api示例代码片段，基于jdk1.8编写。
 
 [javaagent：agentmain的使用（运行中加载）](https://github.com/dictxwang/java-fragments/tree/main/src/agentmainsample)
 
+[java实现常用的数据结构与算法](https://github.com/dictxwang/java-fragments/tree/main/src/algorithm)
+
 [表达式计算组件aviator的应用](https://github.com/dictxwang/java-fragments/blob/main/src/aviator/AviatorBasic.java)
 
 [java位运算相关应用](https://github.com/dictxwang/java-fragments/blob/main/src/basic/BitOperation.java)
