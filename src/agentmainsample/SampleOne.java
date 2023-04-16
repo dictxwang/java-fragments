@@ -3,6 +3,12 @@ package agentmainsample;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 先执行这个类的main方法，再执行AgentAttachMain实现agent绑定
+ * 
+ * @author wangqiang
+ *
+ */
 public class SampleOne {
 
 	public void handleSayHello(String name) throws Exception {

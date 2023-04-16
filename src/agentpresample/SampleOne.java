@@ -3,6 +3,16 @@ package agentpresample;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Java agent-premain 
+ * 
+ * 添加参数： -javaagent:/Users/wangqiang/Programing/Web_Data/lab-agent-pre.jar
+ * 
+ * lab-agent-pre.jar 基于上面agentpre包构建
+ * 
+ * @author wangqiang
+ *
+ */
 public class SampleOne {
 
 	public static void main(String[] args) throws Exception {

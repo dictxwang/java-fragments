@@ -8,10 +8,10 @@ import com.sun.tools.attach.VirtualMachineDescriptor;
  * 中途执行，加载agent
  * @author wangqiang
  */
-public class AgentAttchMain {
+public class AgentAttachMain {
 
 	public static void main(String[] args) throws Exception {
-		loadAgent("/Users/wangqiang/web_data/lab-agent-main.jar");
+		loadAgent("/Users/wangqiang/Programing/Web_Data/lab-agent-main.jar");
 	}
 	
 	private static void loadAgent(String agentJarFile) throws Exception {
