@@ -27,21 +27,21 @@ public class ShellSortBasic {
 		}
 		
 		int gap = lst.length / 2;
+		
 		while (gap > 0) {
-			
-			for (int i = gap; i < lst.length; i = i + gap) {
-				int swapIndex = i;
-				int swapValue = lst[i];
-				
-				// 从已排序的序列中找到插入位置
-				for (int j = i - gap; j >= 0; j = j - gap) {
-					if (lst[j] > swapValue) {
-						lst[j + gap] = lst[j];
-						swapIndex = j;
+			for (int right = gap; right < lst.length; right += gap) {
+				int swapIndex = right;
+				int swapValue = lst[right];
+				for (int left = right - gap; left >= 0; left -= gap) {
+					if (lst[left] > swapValue) {
+						lst[left + gap] = lst[left];
+						swapIndex = left;
 					}
 				}
+				
 				lst[swapIndex] = swapValue;
 			}
+			
 			gap = gap / 2;
 		}
 	}

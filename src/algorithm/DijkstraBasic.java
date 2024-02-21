@@ -27,7 +27,7 @@ public class DijkstraBasic {
 			int row = graph.getPosition(current);
 			
 			if (current == from) {
-				// 如果起始节点，直接将所有邻接节点追加到结果即可
+				// 如果是起始节点，直接将所有邻接节点追加到结果即可
 				for (int col = 0; col < graph.getSize(); col++) {
 					int w = graph.getMatrix()[row][col];
 					char to = graph.getVertexs()[col];

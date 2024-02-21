@@ -14,10 +14,16 @@ public class KMPSearchBasic {
 		}
 		System.out.println();
 		
-		String source = "BBC ABCDAB ABCDABCDABDE";
+		String source = "BBC ABCDAB ABCDABCDABCD";
 		List<Integer> result = kmpSearch(source, pattern);
 		for (int index : result) {
-			System.out.println(index);
+			System.out.printf("find match from: %d\n", index);
+		}
+		
+		pattern = "ABCD";
+		result = kmpSearch(source, pattern);
+		for (int index : result) {
+			System.out.printf("find match from: %d\n", index);
 		}
 	}
 
@@ -73,7 +79,7 @@ public class KMPSearchBasic {
 			if (j == pattern.length()) {
 				result.add(i - j);
 				// 开启新一轮的匹配
-				j = 0;
+				j = next[j - 1] + 1;
 			}
 		}
 		return result;
