@@ -15,23 +15,22 @@ public class MatrixUndirectedGraph {
 
 	// 图的顶点数
 	private int size;
-	// 图的定点名
+	// 图的顶点名
 	char[] vertexs;
 	// 图的关系矩阵
 	int[][] matrix;
 	
 	
 	public MatrixUndirectedGraph(char[] vertexs, char[][] edges) {
+		
 		this.size = vertexs.length;
 		this.matrix = new int[size][size];
 		this.vertexs = vertexs;
 		
-		// 设置矩阵值
 		for (char[] edge : edges) {
 			int p1 = this.getPosition(edge[0]);
 			int p2 = this.getPosition(edge[1]);
 			
-			// 无向图，需要同时设置两个方向
 			this.matrix[p1][p2] = 1;
 			this.matrix[p2][p1] = 1;
 		}
